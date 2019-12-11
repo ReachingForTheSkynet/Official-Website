@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+        <link rel="stylesheet" href="styles.css">
         <link rel="icon" href="data:,">
         <style>
         </style>
@@ -13,7 +14,8 @@
                 <tr>
                     <td>
                         <!-- <div id="logo"></div> -->
-                        <img src="{{ url_for('static', filename='image0.jpg') }}" id="logo">
+                        <!-- <img src="{{ url_for('static', filename='image0.jpg') }}" id="logo"> -->
+                        <img src="image0.jpg" id="logo">
                     </td>
                     <!-- <td>
                         <div id="home" class="top_left">
@@ -109,8 +111,13 @@
         </div>
         <div id = "sponsors">
             <div id = "ty">A Huge Thanks to our Sponsors:</div>
-            <a href = "https://www.firstinspires.org"><img src = " {{ url_for('static', filename = 'first-logo.png')}} " class = "spon"></a>
+            <a href = "https://www.firstinspires.org">
+                <!-- <img src = " {{ url_for('static', filename = 'first-logo.png')}} " class = "spon"> -->
+                <img src = "first-logo.png" class = "spon">
+            </a>
         </div>
     </body>
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='index.js') }}"></script> -->
+    <script src="index.js"></script>
+
 </html>
