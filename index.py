@@ -2,7 +2,7 @@ from flask import Flask, render_template, send_from_directory, jsonify, request
 
 class Main():
     def __init__(self):
-        app = Flask(__name__, static_url_path="/static")
+        app = Flask(__name__)
         @app.route("/")
         def _home():
             return render_template('index.html')
