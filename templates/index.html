@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="icon" href="data:,">
+        <style>
+        </style>
+    </head>
+    <body>
+        <div id = "background"></div>
+        <div id = "top_bar">
+            <table>
+                <tr>
+                    <td>
+                        <!-- <div id="logo"></div> -->
+                        <img src="{{ url_for('static', filename='image0.jpg') }}" id="logo">
+                    </td>
+                    <!-- <td>
+                        <div id="home" class="top_left">
+                            <div class="left_txt">Home Page</div>
+                        </div>
+                    </td> -->
+                    <td>
+                        <div id="about" class="top_left">
+                            <div class="left_txt">Our Mission</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="meet" class="top_left">
+                            <div class="left_txt">Meet the Team</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="blog_title" class="top_left">
+                            <div class="left_txt">Team Updates</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="com" class="top_left">
+                            <div class="left_txt">Accomplishments</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="something" class="top_left">
+                            <div class="left_txt">Contact Us</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id = "first-body" class = "frontpage">
+            <div id = "name" class = "intro">Reaching for the Skynet</div>
+            <div id = "welcome" class = "intro">San Antonio's FIRST Robotics Competiton (FRC) Team</div>
+        </div>
+        <div id = "us">
+            <div class="frontpage">
+                <div class="titlefont">Our Mission</div>
+            </div>
+            <div id = "text" class = "forepage">
+                <div class="subfont">We want to enrich our school and community's engineering culture.</div>
+                <div class = "paratext">We strive to create an FRC program...</div>
+            </div>
+            <div id="big" class="forepage">
+                <div class="subfont">Why fund us?</div>
+                <div class = "paratext">We are the STEM workforce of tomorrow.</div>
+                <!-- <div class="paratext" id = "bigtxt">Reaching for the Skynet (RFS) is a way for students to gain advanced and hands-on STEM opportunities and experience.
+                Recently winning a $6,000 grant from First Inspires, RFS is off to a great start getting off the ground and many of the
+                fundamental logistical challenges have already been alleviated. However, many expenses such as mechanical parts and
+                competition entry fees are obstacles in which still stand in the way of elevating the San Antonio youth population’s
+                access to education on forward-thinking technology. The majority of RFS’s members are from Keystone; they realized that
+                their school offers few opportunities for students interested in engineering. RFS hopes to introduce more engineering
+                opportunities to Keystone School and the community. To offer those students a chance to learn about engineering and
+                create a community of young engineers, RFS was formed. In addition to Keystone students, RFS has received emails for
+                other students from other schools asking to join the newly-formed team. Not only does the RFS team hope to better
+                Keystone’s engineering program but to also open opportunities for other schools to get engaged with the FRC program.
+                Through FIRST Robotics Competition, high school students learn fundamental engineering skills, such as CAD, C++, and
+                mechanics, in a fun, competitive space. Exciting the youth of today to pursue STEM fields and careers will secure the
+                future of STEM, engineering, and other rapidly expanding career fields. RFS has been collaborating with other teams,
+                such as Brandeis’ BroncBotz, to learn the inner ropes of FRC. Recently, a member of the group got an opportunity to talk
+                about RFS on the local San Antonio podcast, CyberTalk.
+            </div> -->
+            </div>
+        </div>
+        <div id = "greet">
+            <div class="frontpage">
+                <div class="titlefont">Learn About the Members of the Team</div>
+            </div>
+        </div>
+        <div id="blog">
+            <div class = "frontpage">
+                <div id="blogtitle" class = "titlefont">Catch up with RFS on our Blog!</div>
+            </div>
+            <div id = "blogentries">
+
+            </div>
+        </div>
+        <div id = "success">
+            <div class="frontpage">
+                <div class="titlefont">What has RFS been up to?</div>
+            </div>
+        </div>
+        <div id = "connect">
+            <div class="frontpage">
+                <div class="titlefont">Contact us!</div>
+            </div>
+            <div id="text" class="forepage">
+                <div id = "interest" class = "subfont">Interested in Sponsoring us?</div>
+            </div>
+        </div>
+        <div id = "sponsors">
+            <div id = "ty">A Huge Thanks to our Sponsors:</div>
+            <a href = "https://www.firstinspires.org"><img src = " {{ url_for('static', filename = 'first-logo.png')}} " class = "spon"></a>
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</html>
