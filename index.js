@@ -5,7 +5,7 @@ console.log(buttons[0].id);
 window.scrollTo(0, 0);
 let i = 0;
 let x = buttons[i].id;
-let panelsToHide = ["us", "greet", "blog", "success", "connect", "first-body"];
+let panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect"];
 for (let j = 0; j < panelsToHide.length; ++j) {
     document.getElementById(panelsToHide[j]).style.display = "none";
     // if (i == j) document.getElementById(panelsToHide[i]).style.display = "block";
