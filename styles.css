@@ -64,7 +64,7 @@ body {
 .left_txt {
     position: relative;
     top: 25%;
-    font-size: 25px;
+    font-size: 1.75vw;
 }
 
 .top_left:hover {
