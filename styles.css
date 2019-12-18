@@ -194,5 +194,6 @@ body {
 #miss {
     top: 0;
     margin-top: 5vh;
+    top: calc(100vh/16);
     /* opacity: 0; */
 }
