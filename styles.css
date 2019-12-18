@@ -5,6 +5,7 @@ body {
     --font-colour: rgb(255, 255, 255);
     --hover-colour: rgb(255, 0, 0);
     --foreground-colour: rgb(196, 152, 207);
+    --text-size:calc(100vw/32);
     
     margin: 0;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -24,10 +25,11 @@ body {
     position: fixed;
     width: 100%;
     height: calc(8vw + 5px);
-    overflow: hidden;
+    /* overflow: hidden; */
     background: var(--top-bar-colour);
     cursor: pointer;
     /* display: table; */
+    z-index:1000;
 }
 #logo {
     position: relative;
@@ -44,6 +46,7 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     /* margin-left: 5px; */
+    z-index:10;
 }
 /* #about {
     margin-left: 7vw;
@@ -111,7 +114,7 @@ body {
 #ty {
     text-align: center;
     color: var(--font-colour);
-    font-size: 35px; 
+    font-size: var(--text-size); 
 }
 .intro, .titlefont, .subfont {
     position: relative;
@@ -121,7 +124,7 @@ body {
     color: var(--font-colour);
 }
 #welcome, .subfont {
-    font-size: calc(100vw/22)
+    font-size: calc(100vw/22);
 }
 .intro {
 	opacity: 1;
@@ -166,4 +169,25 @@ body {
 }
 #bigtxt {
     top: 15vh;
+}
+.event {
+    position: relative;
+    top: calc(8vw + 5px);
+    width: 100%;
+    height: 25vh;
+    background: var(--foreground-colour);
+    background-repeat: no-repeat;
+    background-size: 100% 25vh;
+    opacity: 0.75;
+}
+#arg {
+    background-image: url("backgrounds/argosy2.jpeg");
+}
+#key {
+    background-image: url("backgrounds/keystone.jpg");
+}
+.item {
+    font-size: calc(100vw/22);    
+    text-align: center;
+
 }
