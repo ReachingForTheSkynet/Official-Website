@@ -11,49 +11,30 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     user-select: none;
 }
-/* #background {
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: var(--background-colour);
-} */
 #top_bar {
     top: 0;
     left: 0;
     position: fixed;
     width: 100%;
     height: calc(8vw + 5px);
-    /* overflow: hidden; */
     background: var(--top-bar-colour);
     cursor: pointer;
-    /* display: table; */
     z-index:1000;
 }
 #logo {
     position: relative;
-    /* left: calc(0.5vw - 37.5px); */
-    /* left: 75px; */
     top: 0;
     width: 7vw;
     height: 7vw;
     border-radius: 50px;
     background: pink;
     text-align: center;
-    /* margin-left: 100px; */
-    /* text-emphasis-position: 10px; */
     margin-top: 5px;
     margin-bottom: 5px;
-    /* margin-left: 5px; */
     z-index:10;
 }
-/* #about {
-    margin-left: 7vw;
-} */
 .top_left {
     margin-top: 5px;
-    /* padding: 5px; */
     color: var(--font-colour);
     position: relative;
     height: 50px;
@@ -75,8 +56,6 @@ body {
 }
 
 .top_left:hover {
-    /* border: solid;
-    border-radius: 10%; */
     color: var(--hover-colour);
 }
 #first-body {
@@ -189,11 +168,17 @@ body {
 .item {
     font-size: calc(100vw/22);    
     text-align: center;
-
 }
 #miss {
     top: 0;
     margin-top: 5vh;
     top: calc(100vh/16);
-    /* opacity: 0; */
+}
+.date_white {
+    color: white;
+}
+.item_white {
+    font-size: calc(100vw/22);    
+    text-align: center;
+    color: white;
 }

@@ -38,15 +38,44 @@ window.onbeforeunload = () => {
     window.scrollTo(0, 0);
 }
 let w = 0;
-const go = (setInterval(() => {
-    // console.log("Hello?");
-    // window.requestAnimationFrame(ani);
-    // console.log("Hi?");
+// const go = (setInterval(() => {
+//     // console.log("Hello?");
+//     // window.requestAnimationFrame(ani);
+//     // console.log("Hi?");
+//     let ele = document.getElementById("miss");
+//     const words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create STEM Opportunities", "Grow and Learn Throughout the Year"];
+//     ele.innerHTML = words[w];
+//     w = (w+1)%words.length;
+// }, 2000));
+let q = 0, j = 0, swit = true;
+const go = setInterval(() => {
+    // window.requestAnimationFrame(go);
+    // c.fillStyle = "black";
+    // c.fillRect(0, 0, b.width, b.height);
+    // c.fillStyle = x;
+    // c.strokeStyle = y;
+    // c.font = "10vw Comic Sans MS";
     let ele = document.getElementById("miss");
-    const words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create STEM Opportunities", "Grow and Learn Throughout the Year"];
-    ele.innerHTML = words[w];
-    w = (w+1)%words.length;
-}, 2000));
+    let words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create new STEM Opportunities", "Grow and Learn Throughout the Year"];
+    // c.fillText(words[j].substring(0, i), b.width / 2, b.height / 2);
+    // c.textAlign = "center";
+    ele.innerHTML = words[j].substring(0, q);
+    console.log(words[j].substring(0, q));
+    if (swit) {
+        q++;
+        if (q > words[j].length+2) swit = false;
+    }
+    else {
+        q--;
+        if (q < 0) {
+            swit = true;
+            j = (j + 1) % words.length;
+            // x = `hsl(${Math.random() * 360},100%,50%)`;
+            // y = `hsl(${Math.random() * 360},100%,50%)`;
+        }
+    }
+}, 75);
+
 // let w = 0, op = 0;
 // const ani = () => {
 //     // console.log("Hello?");
