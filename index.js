@@ -1,144 +1,138 @@
 let buttons = document.getElementsByClassName("top_left");
-// console.log(buttons);
 let placesToGo = [1, 2, 3, 4, 5, 6]; // A list of HTML files;
-// console.log(buttons[0].id);
 window.scrollTo(0, 0);
 let i = 0;
-let x = buttons[i].id;
-let panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect"];
+const panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect", "ba1"];
 for (let j = 0; j < panelsToHide.length; ++j) {
-    document.getElementById(panelsToHide[j]).style.display = "none";
-    // if (i == j) document.getElementById(panelsToHide[i]).style.display = "block";
+    document.getElementById(panelsToHide[j]).style.display = "none"; // Closes all open tabs
 }
-document.getElementById("first-body").style.display = "block";
-// console.log(panelsToHide.length);
-// console.log(buttons.length);
+document.getElementById("first-body").style.display = "block"; // Shows the homepage
+
 for (let i = 0; i < buttons.length; ++i) {
-    // console.log(buttons[i].id, panelsToHide[i]);
-    document.getElementById(buttons[i].id).addEventListener("click", () => {
-        // console.log("Hello");
+    document.getElementById(buttons[i].id).addEventListener("click", () => { // If clicks on button, close everything and open that.
         window.scrollTo(0, 0);
-        let x = buttons[i].id;
-        // let panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect"];
         for (let j = 0; j < panelsToHide.length; ++j) {
             document.getElementById(panelsToHide[j]).style.display = "none";
             if (i == j) document.getElementById(panelsToHide[i]).style.display = "block";
         }
     })
 }
-document.getElementById("logo").addEventListener("click", () => {
-    // let panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect"];
+document.getElementById("logo").addEventListener("click", () => { // Logo goes to main screen
     for (let j = 0; j < panelsToHide.length; ++j) {
         document.getElementById(panelsToHide[j]).style.display = "none";
     }
     document.getElementById("first-body").style.display = "block";
     window.scrollTo(0, 0);
 })
-window.onbeforeunload = () => {
+window.onbeforeunload = () => { // Set scroll to top at the start
     window.scrollTo(0, 0);
 }
 let w = 0;
-// const go = (setInterval(() => {
-//     // console.log("Hello?");
-//     // window.requestAnimationFrame(ani);
-//     // console.log("Hi?");
-//     let ele = document.getElementById("miss");
-//     const words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create STEM Opportunities", "Grow and Learn Throughout the Year"];
-//     ele.innerHTML = words[w];
-//     w = (w+1)%words.length;
-// }, 2000));
-let q = 0, j = 0, swit = true;
-const go = setInterval(() => {
-    // window.requestAnimationFrame(go);
-    // c.fillStyle = "black";
-    // c.fillRect(0, 0, b.width, b.height);
-    // c.fillStyle = x;
-    // c.strokeStyle = y;
-    // c.font = "10vw Comic Sans MS";
+const go = (setInterval(() => { // Fading one
+    // console.log("Hello?");
+    // window.requestAnimationFrame(ani);
+    // console.log("Hi?");
     let ele = document.getElementById("miss");
-    let words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create new STEM Opportunities", "Grow and Learn Throughout the Year"];
-    // c.fillText(words[j].substring(0, i), b.width / 2, b.height / 2);
-    // c.textAlign = "center";
-    ele.innerHTML = words[j].substring(0, q);
-    console.log(words[j].substring(0, q));
-    if (swit) {
-        q++;
-        if (q > words[j].length+2) swit = false;
-    }
-    else {
-        q--;
-        if (q < 0) {
-            swit = true;
-            j = (j + 1) % words.length;
-            // x = `hsl(${Math.random() * 360},100%,50%)`;
-            // y = `hsl(${Math.random() * 360},100%,50%)`;
-        }
-    }
-}, 75);
-
-// let w = 0, op = 0;
-// const ani = () => {
-//     // console.log("Hello?");
-//     window.requestAnimationFrame(ani);
-//     // console.log("Hi?");
+    const words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create STEM Opportunities", "Grow and Learn Throughout the Year"];
+    ele.innerHTML = words[w];
+    w = (w+1)%words.length;
+}, 1500));
+// let q = 0, j = 0, swit = true;
+// const go = setInterval(() => {
 //     let ele = document.getElementById("miss");
-//     const words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create STEM Opportunities", "Grow and Learn Throughout the Year"];
-//     ele.innerHTML = words[w];
-//     console.log(ele.style.opacity);
-//     console.log("HI");
-//     if (ele.style.opacity >= 1) {
-//         while (!ele.style.opacity < 0) {
-//             setTimeout(
-//                 () => {
-//                     ele.style.opacity -= 0.1;
-//                     if (ele.style.opacity < 0) {
-//                         ele.style.opacity = 0;
-//                         return;
-//                     }
-//                     console.log("NUM1")
-//                 }, 10
-//             )
+//     let words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create new STEM Opportunities", "Grow and Learn Throughout the Year"];
+//     ele.innerHTML = words[j].substring(0, q);
+//     // console.log(words[j].substring(0, q));
+//     if (swit) {
+//         q++;
+//         if (q > words[j].length+2) swit = false;
+//     }
+//     else {
+//         q--;
+//         if (q < 0) {
+//             swit = true;
+//             j = (j + 1) % words.length;
 //         }
 //     }
-//     if (ele.style.opacity <= 0) {
-//         while (!ele.style.opacity >= 1) {
-//             setTimeout(
-//                 () => {
-//                     ele.style.opacity += 0.1;
-//                     if (ele.style.opacity >= 1) {
-//                         ele.style.opacity = 1;
-//                         return;
-//                     }
-//                     console.log("NUM2")
-//                 }, 10
-//             )
-//         }
-//         // let y = setInterval(() => {
-//         //     ele.style.opacity += 0.1;
-//         //     if (ele.style.opacity > 1) {
-//         //         ele.style.opacity = 1;
-//         //         clearInterval(y);
-//         //     }
-//         //     console.log("NUM2")
-//         // }, 10)
+// }, 75);
+
+
+const readTxt = (file) => {
+    // let xhttp = new XMLHttpRequest();
+    // file.open("GET", link, false);
+    // let txt;
+    // xhttp.onreadystatechange = (e) => {
+    //     if (e.target.readyState == 4 && e.target.status == 200) {
+    //         // console.log(txt);
+    //         txt = e.target.responseText;
+    //         console.log(txt);
+    //     }
+    //     console.log("ERROR");
+    // }
+    // xhttp.open("GET", link);
+    // return fetch(url).then(response => {
+    //     if (!response.ok) {
+    //         throw new Error("HTTP error " + response.status); // Rejects the promise
+    //     }
+    // });
+    // return txt;
+    // var f = new XMLHttpRequest();
+    // f.open("GET", file, false);
+    // f.onreadystatechange = function () {
+    //     if (f.readyState === 4) {
+    //         if (f.status === 200 || f.status == 0) {
+    //             var res = f.responseText;
+    //             alert(res);
+    //         }
+    //     }
+    // }
+    // f.send(null);
+    // function reqListener() {
+    //     console.log(this.responseText);
+    // }
+
+    // var oReq = new XMLHttpRequest();
+    // oReq.addEventListener("load", reqListener);
+    // oReq.open("GET", "blog1.txt", false);
+    // oReq.send();
+
+}
+// function readTextFile(file) {
+    // var rawFile = new XMLHttpRequest();
+    // rawFile.open("GET", file, true);
+    // rawFile.onreadystatechange = function () {
+    //     if (rawFile.readyState === 4) {
+    //         if (rawFile.status === 200 || rawFile.status == 0) {
+    //             var allText = rawFile.responseText;
+    //             alert(allText);
+    //         }
+    //     }
+    // }
+    // rawFile.send(null);
+// }
+
+var openFile = function (event) {
+    var input = event.target;
+
+    var reader = new FileReader();
+    reader.onload = function () {
+        var dataURL = reader.result;
+        var output = document.getElementById('output');
+        output.src = dataURL;
+    };
+    reader.readAsDataURL(input.files[0]);
+};
+
+// const fs = require("fs"); // File server for later
+/* For Blog Articles: */
+// document.getElementById("key").addEventListener("click", () => {
+//     console.log("CLICKED");
+//     window.scrollTo(0, 0);
+//     for (let j = 0; j < panelsToHide.length; ++j) {
+//         document.getElementById(panelsToHide[j]).style.display = "none";
 //     }
-//     console.log(ele.style.opacity);
-//     // let timer1 = setInterval(() => {
-//     //     if (op >= 1) {
-//     //         clearInterval(timer1);
-//     //     }
-//     //     x.style.opacity = op;
-//     //     // x.style.filter = "alpha(opacity=" + op * 100 + ")";
-//     //     op += op * 0.1;
-//     // }, 10);
-//     // const timer2 = setInterval(function () {
-//     //     if (op <= 0.1) {
-//     //         clearInterval(timer2);
-//     //         w=(w+1)%words.length;
-//     //     }
-//     //     x.style.opacity = op;
-//     //     // x.style.filter = 'alpha(opacity=' + op * 100 + ")";
-//     //     op -= op * 0.1;
-//     // }, 50);
-// };
-// ani();
+//     document.getElementById("ba1").style.display = "inline-block";
+//     let somthing = readTextFile("blog1.txt");
+//     document.getElementById("ba1").innerHTML = somthing;
+//     console.log(somthing);
+// });
