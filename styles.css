@@ -53,6 +53,7 @@ body {
     position: relative;
     top: 25%;
     font-size: 1.75vw;
+    opacity: 100%;
 }
 
 .top_left:hover {
@@ -101,6 +102,7 @@ body {
     text-align: center;
     font-size: calc(100vw/12);
     color: var(--font-colour);
+    opacity: 100%;
 }
 #welcome, .subfont {
     font-size: calc(100vw/22);
@@ -141,6 +143,7 @@ body {
     text-align: center;
     font-size: calc(100vw/32);
     color: var(--font-colour);
+    opacity: 100%;
 }
 
 #big {
@@ -148,6 +151,7 @@ body {
 }
 #bigtxt {
     top: 15vh;
+    opacity: 100%;
 }
 .event {
     position: relative;
@@ -157,6 +161,7 @@ body {
     background: var(--foreground-colour);
     background-repeat: no-repeat;
     background-size: 100% 25vh;
+    /* background-size: 100%; */
     opacity: 0.75;
 }
 #arg {
@@ -181,4 +186,24 @@ body {
     font-size: calc(100vw/22);    
     text-align: center;
     color: white;
+}
+#shopday1 {
+    background-image: url("backgrounds/shopday1.png");
+    top: calc(8vw + 5px);
+    left: 0;
+    z-index: -2;
+    background-size: 100%;
+}
+#op {
+    opacity: 75%;
+    z-index: 1;
+    top:0;
+    left:0;
+}
+#shop1 {
+    background-image: url("backgrounds/shop1.1.jpg");
+
+}
+#sw {
+    background-image: url("backgrounds/sw.jpg");
 }
