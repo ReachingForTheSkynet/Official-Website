@@ -6,7 +6,7 @@ body {
     --hover-colour: rgb(255, 0, 0);
     --foreground-colour: rgb(159, 173, 218);
     --text-size:calc(100vw/32);
-    
+    --top-bar-size: calc(8vw + 5px);
     margin: 0;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     user-select: none;
@@ -16,7 +16,7 @@ body {
     left: 0;
     position: fixed;
     width: 100%;
-    height: calc(8vw + 5px);
+    height: var(--top-bar-size);
     background: var(--top-bar-colour);
     cursor: pointer;
     z-index:1000;
@@ -61,20 +61,20 @@ body {
 }
 #first-body {
     width: 100%;
-    height: calc(100vh - 8vw - 5px);
+    height: calc(100vh - var(--top-bar-size));
     position: relative;
     background: var(--background-colour);
     left: 0;
-    top: calc(8vw + 5px);
+    top: var(--top-bar-size);
     z-index: -1;
 }
 .frontpage {
     width: 100%;
-    height: calc(100vh - 8vw - 5px);
+    height: calc(100vh - var(--top-bar-size));
     position: relative;
     background: var(--background-colour);
     left: 0;
-    top: calc(8vw + 5px);
+    top: var(--top-bar-size);
     z-index: -1;
 }
 #sponsors {
@@ -82,8 +82,9 @@ body {
     width: 100%;
     height: 200px;
     background: var(--sponsor-colour);
-    top: calc(8vw + 5px);;
+    top: var(--top-bar-size);
     left: 0;
+    z-index: -1;
 }
 .spon {
     position: relative;
@@ -127,10 +128,10 @@ body {
 }
 .forepage {
     width: 100%;
-    height: calc(100vh - 8vw - 5px);
+    height: calc(100vh - var(--top-bar-size));
     position: relative;
     left: 0;
-    top: calc(8vw + 5px);
+    top: var(--top-bar-size);
     z-index: -1;
     background: var(--foreground-colour);
 }
@@ -155,7 +156,7 @@ body {
 }
 .event {
     position: relative;
-    top: calc(8vw + 5px);
+    top: var(--top-bar-size);
     width: 100%;
     height: 25vh;
     background: var(--foreground-colour);
@@ -189,7 +190,8 @@ body {
 }
 #shopday1 {
     background-image: url("backgrounds/shopday1.png");
-    top: calc(8vw + 5px);
+    background-repeat: no-repeat;
+    top: var(--top-bar-size);
     left: 0;
     z-index: -2;
     background-size: 100%;
@@ -199,11 +201,57 @@ body {
     z-index: 1;
     top:0;
     left:0;
+    max-width: 100%;
+    display: inline-block;
 }
 #shop1 {
     background-image: url("backgrounds/shop1.1.jpg");
-
 }
 #sw {
     background-image: url("backgrounds/sw.jpg");
+}
+#topbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu_control {
+    display: none;
+    float: left;
+    position: relative;
+    width: 8vh;
+    height: 8vh;
+    top: 1vh;
+}
+#mobile_navigator {
+    position: fixed;
+    background: var(--background-colour);
+    left: 0;
+    top: var(--top-bar-size);
+    display: none;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 90%;
+}
+.mob_button {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 3vh;
+    color: white;
+    text-align: center;
+}
+.mob_button:hover {
+    color: red;
+}
+.mobnavtxt {
+    position: relative;
+    /* right: 45vh; */
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+    text-align: center;
+    height: 5vh;
+    width: 25vw;
 }

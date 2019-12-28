@@ -11,6 +11,7 @@
     <body>
         <div id = "background"></div>
         <div id = "top_bar">
+            <img src = "backgrounds/1146025.png" id = "menu_control">
             <table>
                 <tr>
                     <td>
@@ -48,6 +49,28 @@
                     </td>
                 </tr>
             </table>
+        </div>
+        <div id = "mobile_navigator">
+            <div>
+                <div class = "mob_button" id = "mhome">
+                    <div class = "mobnavtxt">Home Page</div>
+                </div>
+                <div class = "mob_button" id = "mmission">
+                    <div class = "mobnavtxt">Our Mission</div>
+                </div>
+                <div class = "mob_button" id = "mteam">
+                    <div class = "mobnavtxt">Meet the Team</div>
+                </div>
+                <div class = "mob_button" id = "mup">
+                    <div class = "mobnavtxt">Team Updates</div>
+                </div>
+                <div class = "mob_button" id = "msource">
+                    <div class = "mobnavtxt">Resources</div>
+                </div>
+                <div class = "mob_button" id = "mcontact">
+                    <div class = "mobnavtxt">Contact Us</div>
+                </div>
+            </div>
         </div>
         <div id = "first-body" class = "frontpage">
             <div id = "name" class = "intro">Reaching for the Skynet</div>
@@ -130,13 +153,17 @@
                 <div id = "interest" class = "subfont">Interested in Sponsoring us?</div>
             </div>
         </div>
-        <div id = "sponsors">
+        <nav id = "sponsors">
             <div id = "ty">A Huge Thanks to our Sponsors:</div>
             <a href = "http://www.argosyfnd.org/">
                 <!-- <img src = " {{ url_for('static', filename = 'first-logo.png')}} " class = "spon"> -->
                 <img src = "logo/argosy.jpg" class = "spon">
             </a>
-        </div>
+            <a href="https://www.solidworks.com/">
+                <!-- <img src = " {{ url_for('static', filename = 'first-logo.png')}} " class = "spon"> -->
+                <img src="logo/sw.png" class="spon">
+            </a>
+        </nav>
         <div id = "ba1" class = "blog_article">
             
         </div>

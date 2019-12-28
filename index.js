@@ -1,20 +1,67 @@
-let buttons = document.getElementsByClassName("top_left");
-let placesToGo = [1, 2, 3, 4, 5, 6]; // A list of HTML files;
-window.scrollTo(0, 0);
-let i = 0;
-const panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect", "ba1"];
-for (let j = 0; j < panelsToHide.length; ++j) {
-    document.getElementById(panelsToHide[j]).style.display = "none"; // Closes all open tabs
+const panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect", "ba1", "mobile_navigator"];
+const closePanels = () => {
+    window.scrollTo(0, 0);
+    for (let j = 0; j < panelsToHide.length; ++j) {
+        document.getElementById(panelsToHide[j]).style.display = "none"; // Closes all open tabs
+    }
 }
-document.getElementById("first-body").style.display = "block"; // Shows the homepage
 
+if (window.innerWidth < window.innerHeight) {
+    let arr = document.getElementsByClassName("frontpage");
+    for (let i = 0; i < arr.length; ++i) {
+        arr[i].style.height = "70vh";
+    }
+    arr = document.getElementsByClassName("forepage");
+    for (let i = 0; i < arr.length; ++i) {
+        arr[i].style.height = "70vh";
+    }
+    let html = document.getElementsByTagName('body')[0];
+    html.style.setProperty("--top-bar-size", "10vh");
+    arr = document.getElementsByClassName("top_left");
+    for (let i = 0; i < arr.length; ++i) arr[i].style.display = "none";
+    document.getElementById("logo").style.display = "block";
+    document.getElementById("logo").style.width = "8vh";
+    document.getElementById("logo").style.height = "8vh";
+    document.getElementById("logo").style.left = "calc(50vw - 16vh)";
+    document.getElementById("menu_control").style.display = "block";
+    let menu_clicked = false;
+    document.getElementById("menu_control").addEventListener("click", () => {
+        if (menu_clicked) {
+            let mobnav = document.getElementById("mobile_navigator");
+            mobnav.style.display = "none";
+            menu_clicked = !menu_clicked;
+        } else {
+            let mobnav = document.getElementById("mobile_navigator");
+            mobnav.style.display = "block";
+            let buttons = document.getElementsByClassName("mob_button");
+            console.log(buttons)
+            for (let i = 0; i < buttons.length; ++i) {
+                document.getElementById(buttons[i].id).addEventListener("click", () => { // If clicks on button, close everything and open that.
+                    closePanels();
+                    console.log(panelsToHide[i] + " HEllo");
+                    console.log(i);
+                    if (i >= 6) document.getElementById(panelsToHide[i - 6]).style.display = "block";
+                    else document.getElementById(panelsToHide[i]).style.display = "block";
+                })
+            }
+            menu_clicked = !menu_clicked;
+        }
+    });
+}
+let buttons = document.getElementsByClassName("top_left");
+closePanels();
+document.getElementById("first-body").style.display = "block"; // Shows the homepage
 for (let i = 0; i < buttons.length; ++i) {
     document.getElementById(buttons[i].id).addEventListener("click", () => { // If clicks on button, close everything and open that.
-        window.scrollTo(0, 0);
-        for (let j = 0; j < panelsToHide.length; ++j) {
-            document.getElementById(panelsToHide[j]).style.display = "none";
-            if (i == j) document.getElementById(panelsToHide[i]).style.display = "block";
-        }
+        // window.scrollTo(0, 0);
+        // for (let j = 0; j < panelsToHide.length; ++j) {
+        //     document.getElementById(panelsToHide[j]).style.display = "none";
+        //     if (i == j) document.getElementById(panelsToHide[i]).style.display = "block";
+        // }
+        closePanels();
+        console.log(panelsToHide[i] + " HEllo")
+        console.log(i)
+        if (i >= 6) document.getElementById(panelsToHide[i-6]).style.display = "block"
     })
 }
 document.getElementById("logo").addEventListener("click", () => { // Logo goes to main screen
