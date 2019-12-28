@@ -17,7 +17,7 @@ if (window.innerWidth < window.innerHeight) {
     }
     arr = document.getElementsByClassName("forepage");
     for (let i = 0; i < arr.length; ++i) {
-        arr[i].style.height = "70vh";
+        arr[i].style.height = "50vh";
     }
     let html = document.getElementsByTagName('body')[0];
     html.style.setProperty("--top-bar-size", "10vh");
