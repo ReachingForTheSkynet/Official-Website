@@ -33,10 +33,12 @@ if (window.innerWidth < window.innerHeight) {
     let menu_clicked = false;
     document.getElementById("menu_control").addEventListener("click", () => {
         if (menu_clicked) {
+            document.getElementById("menu_control").src = "backgrounds/1146025.png";
             let mobnav = document.getElementById("mobile_navigator");
             mobnav.style.display = "none";
             menu_clicked = !menu_clicked;
         } else {
+            document.getElementById("menu_control").src = "backgrounds/x.png";
             let mobnav = document.getElementById("mobile_navigator");
             mobnav.style.display = "block";
             let buttons = document.getElementsByClassName("mob_button");
@@ -44,8 +46,6 @@ if (window.innerWidth < window.innerHeight) {
             for (let i = 0; i < buttons.length; ++i) {
                 document.getElementById(buttons[i].id).addEventListener("click", () => { // If clicks on button, close everything and open that.
                     closePanels();
-                    console.log(panelsToHide[i] + " HEllo");
-                    console.log(i);
                     if (i >= 6) document.getElementById(panelsToHide[i - 6]).style.display = "block";
                     else document.getElementById(panelsToHide[i]).style.display = "block";
                 })
