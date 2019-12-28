@@ -1,3 +1,6 @@
+window.onbeforeunload = () => { // Set scroll to top at the start
+    window.scrollTo(0, 0);
+}
 const panelsToHide = ["first-body", "us", "greet", "blog", "success", "connect", "ba1", "mobile_navigator"];
 const closePanels = () => {
     window.scrollTo(0, 0);
@@ -6,6 +9,7 @@ const closePanels = () => {
     }
 }
 
+// For Mobile Versions:
 if (window.innerWidth < window.innerHeight) {
     let arr = document.getElementsByClassName("frontpage");
     for (let i = 0; i < arr.length; ++i) {
@@ -23,7 +27,7 @@ if (window.innerWidth < window.innerHeight) {
     mlogo.style.display = "block";
     mlogo.style.width = "8vh";
     mlogo.style.height = "8vh";
-    mlogo.style.left = "calc(50vw - 16vh)";
+    mlogo.style.left = "calc(50vw - 14vh)";
     mlogo.style.marginTop = "1vh";
     document.getElementById("menu_control").style.display = "block";
     let menu_clicked = false;
@@ -50,19 +54,14 @@ if (window.innerWidth < window.innerHeight) {
         }
     });
 }
+
+// Default Mode:
 let buttons = document.getElementsByClassName("top_left");
 closePanels();
 document.getElementById("first-body").style.display = "block"; // Shows the homepage
 for (let i = 0; i < buttons.length; ++i) {
     document.getElementById(buttons[i].id).addEventListener("click", () => { // If clicks on button, close everything and open that.
-        // window.scrollTo(0, 0);
-        // for (let j = 0; j < panelsToHide.length; ++j) {
-        //     document.getElementById(panelsToHide[j]).style.display = "none";
-        //     if (i == j) document.getElementById(panelsToHide[i]).style.display = "block";
-        // }
         closePanels();
-        console.log(panelsToHide[i] + " HEllo")
-        console.log(i)
         if (i >= 6) document.getElementById(panelsToHide[i-6]).style.display = "block";
         else document.getElementById(panelsToHide[i]).style.display = "block";
     })
@@ -74,14 +73,8 @@ document.getElementById("logo").addEventListener("click", () => { // Logo goes t
     document.getElementById("first-body").style.display = "block";
     window.scrollTo(0, 0);
 })
-window.onbeforeunload = () => { // Set scroll to top at the start
-    window.scrollTo(0, 0);
-}
 let w = 0;
 const go = (setInterval(() => { // Fading one
-    // console.log("Hello?");
-    // window.requestAnimationFrame(ani);
-    // console.log("Hi?");
     let ele = document.getElementById("miss");
     const words = ["Enrich Keystone's Robotics Program", "Create an Engineering Culture for Keystone School", "Create STEM Opportunities", "Grow and Learn Throughout the Year"];
     ele.innerHTML = words[w];
