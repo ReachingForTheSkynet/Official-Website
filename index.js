@@ -19,10 +19,12 @@ if (window.innerWidth < window.innerHeight) {
     html.style.setProperty("--top-bar-size", "10vh");
     arr = document.getElementsByClassName("top_left");
     for (let i = 0; i < arr.length; ++i) arr[i].style.display = "none";
-    document.getElementById("logo").style.display = "block";
-    document.getElementById("logo").style.width = "8vh";
-    document.getElementById("logo").style.height = "8vh";
-    document.getElementById("logo").style.left = "calc(50vw - 16vh)";
+    let mlogo = document.getElementById("logo")
+    mlogo.style.display = "block";
+    mlogo.style.width = "8vh";
+    mlogo.style.height = "8vh";
+    mlogo.style.left = "calc(50vw - 16vh)";
+    mlogo.style.marginTop = "1vh";
     document.getElementById("menu_control").style.display = "block";
     let menu_clicked = false;
     document.getElementById("menu_control").addEventListener("click", () => {

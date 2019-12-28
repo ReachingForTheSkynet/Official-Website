@@ -253,5 +253,6 @@ body {
     padding: 3px;
     text-align: center;
     height: 5vh;
-    width: 25vw;
+    width: 50vw;
+    font-size: calc(100vw/22);
 }
