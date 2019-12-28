@@ -63,7 +63,8 @@ for (let i = 0; i < buttons.length; ++i) {
         closePanels();
         console.log(panelsToHide[i] + " HEllo")
         console.log(i)
-        if (i >= 6) document.getElementById(panelsToHide[i-6]).style.display = "block"
+        if (i >= 6) document.getElementById(panelsToHide[i-6]).style.display = "block";
+        else document.getElementById(panelsToHide[i]).style.display = "block";
     })
 }
 document.getElementById("logo").addEventListener("click", () => { // Logo goes to main screen
