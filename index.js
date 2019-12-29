@@ -32,26 +32,28 @@ if (window.innerWidth < window.innerHeight) {
     document.getElementById("menu_control").style.display = "block";
     let menu_clicked = false;
     document.getElementById("menu_control").addEventListener("click", () => {
+        // console.log(menu_clicked);
         if (menu_clicked) {
             // document.getElementById("menu_control").src = "backgrounds/1146025.png";
             let mobnav = document.getElementById("mobile_navigator");
             mobnav.style.display = "none";
-            menu_clicked = !menu_clicked;
+            menu_clicked = false;
         } else {
             // document.getElementById("menu_control").src = "backgrounds/x.png";
             let mobnav = document.getElementById("mobile_navigator");
             mobnav.style.display = "block";
             let buttons = document.getElementsByClassName("mob_button");
-            console.log(buttons)
+            // console.log(buttons);
             for (let i = 0; i < buttons.length; ++i) {
                 document.getElementById(buttons[i].id).addEventListener("click", () => { // If clicks on button, close everything and open that.
                     closePanels();
                     if (i >= 6) document.getElementById(panelsToHide[i - 6]).style.display = "block";
                     else document.getElementById(panelsToHide[i]).style.display = "block";
+                    menu_clicked = false;
                     // document.getElementById("menu_control").src = "backgrounds/1146025.png";
                 })
             }
-            menu_clicked = !menu_clicked;
+            menu_clicked = true;
         }
     });
 }
