@@ -32,7 +32,6 @@ if (window.innerWidth < window.innerHeight) {
     document.getElementById("menu_control").style.display = "block";
     let menu_clicked = false;
     document.getElementById("menu_control").addEventListener("click", () => {
-        // console.log(menu_clicked);
         if (menu_clicked) {
             // document.getElementById("menu_control").src = "backgrounds/1146025.png";
             let mobnav = document.getElementById("mobile_navigator");
