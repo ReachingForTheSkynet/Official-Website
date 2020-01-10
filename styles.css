@@ -256,3 +256,6 @@ body {
     width: 50vw;
     font-size: calc(100vw/22);
 }
+#text {
+    height: 50vh;
+}
