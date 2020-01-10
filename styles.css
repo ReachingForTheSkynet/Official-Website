@@ -101,12 +101,12 @@ body {
     position: relative;
     top: calc(100vh/4);
     text-align: center;
-    font-size: calc(100vw/12);
+    font-size: calc(100vw/15);
     color: var(--font-colour);
     opacity: 100%;
 }
 #welcome, .subfont {
-    font-size: calc(100vw/22);
+    font-size: calc(100vw/30);
 }
 .intro {
 	opacity: 1;

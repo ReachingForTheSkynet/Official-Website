@@ -1,3 +1,5 @@
+alert("Hey. Our website is currently under construction. Please excuse us for any technical difficulties.");
+
 window.onbeforeunload = () => { // Set scroll to top at the start
     window.scrollTo(0, 0);
 }
